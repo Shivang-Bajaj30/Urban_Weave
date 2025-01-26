@@ -1,68 +1,75 @@
-*:root {
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    margin: 0;  
-    padding: 0;
+:root {
     --background: #DBDBDB;
     --color-1: #BF5B21;
-    --color-1-light: #da7e49;
-    overflow-x: hidden;
-    --icon-size: 50px;
-    --main-color: #e9f1f4;
 }
-
 
 body {
+    margin: 0;
+    padding: 0;
+    /*font-family: Arial, sans-serif;*/
     background-color: var(--background);
-    font-family: Arial, sans-serif;
-    /* margin: 0; */
-    /* padding: 0; */
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
     background-color: var(--background);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.logo-container {
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
 }
 
 .logo {
-    max-width: 100%;
-    width: 5%;
-    height: fit-content;
+    height: 50px;
     cursor: pointer;
+    margin-right: 34px; /* Gap between logo and HOME */
 }
 
 .nav_links {
+    display: flex;
     list-style: none;
+    margin-left: 3.8in;
 }
 
 .nav_links li {
-    display: inline-block;
-    padding: 12px 20px 0px 20px;
+    margin-right: 51px; /* Adjusted spacing between menu items */
+}
+
+.nav_links li:last-child {
+    margin-right: 0; /* No gap after the last menu item */
 }
 
 .nav_links li a {
-    transition: all 0.3s ease 0s;
+    font-family: "Source Serif 4", serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s; /* Smooth transition for color change */
 }
+
 
 .nav_links li a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0%;
+    width: 0;
     height: 2px;
-    background-color: var(--color-1);
-    transition: width 0.3s ease;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    background: var(--color-1); /* Your desired underline color */
+    transition: width 0.2s;
 }
 
 .nav_links li a:hover::after {
@@ -73,110 +80,52 @@ header {
     color: var(--color-1);
 }
 
-.cta button {
-    padding: 9px 25px;
-    margin-bottom: 7px;
-    background-color: var(--color-1);
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+.container {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto; /* Align search bar to the right */
+    margin-right: 20px; /* Ensure the search bar is close to the buttons */
 }
 
-.cta button:hover {
-    opacity: 0.8;
-    color: white;
-}
-
-.burger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 25px;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background: #FFF;
+.container input[type="text"] {
+    width: 100%;
+    max-width: 236px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
     transition: all 0.3s ease;
 }
 
-li a {
-    font-family: "Source Serif 4", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: medium;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    position: relative;
+.container input[type="text"]:focus {
+    border-color: var(--color-1);
+    box-shadow: 0 0 5px var(--color-1);
 }
 
-
-
-
-.search {
-    margin-top: 11px;
-    display: table;
-    margin-right: 160px;
-    margin-left: -94px;
-
-  input {
-      background: none;
-      border: none;
-      outline: none;
-      width: 28px;
-      min-width: 0;
-      padding: 0;
-      z-index: 1;
-      position: relative;
-      line-height: 18px;
-      margin: 5px 0;
-      font-size: 14px;
-      -webkit-appearance: none;
-      font-family: 'Mukta Malar';
-      transition: all .6s ease;
-      cursor: pointer;
-      color: #fff;
-      & + div {
-          position: relative;
-          height: 28px;
-          width: 96%;
-          margin: -28px 0 0 0;
-          svg {
-              display: block;
-              position: absolute;
-              height: 28px;
-              width: 160px;
-              right: 0;
-              top: 0;
-              fill: none;
-              stroke: #fff;
-              stroke-width: 1.5px;
-              stroke-dashoffset: 212.908 + 59;
-              stroke-dasharray: 59 212.908;
-              transition: all .6s ease;
-          }
-      }
-      &:not(:placeholder-shown),
-      &:focus {
-          width: 160px;
-          padding: 0 4px;
-          cursor: text;
-          &+ div {
-              svg {
-                  stroke-dasharray: 150 212.908;
-                  stroke-dashoffset: 300;
-              }
-          }
-      }
-  }
+.cta {
+    display: flex;
+    gap: 10px;
 }
 
-::selection {
-  background: rgba(#fff, .2);
+.cta .button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
-::-moz-selection {
-  background: rgba(#fff, .2);
+
+.cta .button:hover {
+    background-color: white;
+    color: black;
 }
+
+header > * {
+    display: flex;
+    align-items: center;
+}
+
