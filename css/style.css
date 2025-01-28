@@ -80,14 +80,14 @@ header {
     color: var(--color-1);
 }
 
-.container {
+.cont {
     display: flex;
     justify-content: flex-end;
-    margin-left: auto; /* Align search bar to the right */
-    margin-right: 20px; /* Ensure the search bar is close to the buttons */
+    margin-left: auto;
+    margin-right: 20px;
 }
 
-.container input[type="text"] {
+.cont input[type="text"] {
     width: 100%;
     max-width: 236px;
     padding: 10px 15px;
@@ -98,7 +98,7 @@ header {
     transition: all 0.3s ease;
 }
 
-.container input[type="text"]:focus {
+.cont input[type="text"]:focus {
     border-color: var(--color-1);
     box-shadow: 0 0 5px var(--color-1);
 }
@@ -119,9 +119,17 @@ header {
     cursor: pointer;
 }
 
+.cta .button a {
+    /*font-weight: bold;*/
+    text-decoration: none;
+    color: white;
+}
+
 .cta .button:hover {
     background-color: white;
-    color: black;
+    a {
+        color: black;
+    }
 }
 
 header > * {
