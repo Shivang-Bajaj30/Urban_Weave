@@ -22,14 +22,14 @@ header {
 }
 
 .logo-container {
-    /*display: flex;*/
-    /*justify-content: flex-start;*/
+    display: flex;
+    justify-content: flex-start;
 }
 
 .logo {
-    height: 50px;
+    height: 57px;
     cursor: pointer;
-    margin-right: 34px; /* Gap between logo and HOME */
+    /*margin-right: 34px; !* Gap between logo and HOME *!*/
 }
 
 .nav_links {
