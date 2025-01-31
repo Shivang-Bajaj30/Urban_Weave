@@ -8,17 +8,34 @@ p{
 }
 #marquee{
     font-family: "Source Serif 4", serif;
-    animation: marquee 20s linear infinite;
+    animation: marquee 10s ease-in-out infinite;
     color: red;
     white-space: nowrap;
     overflow: hidden;
 }
 
-@keyframes marquee {
+/*@keyframes marquee {
     from {
-        transform: translateX(100%);
+        transform: translateX(64%);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-65%);
     }
+}*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
+.grid-item {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
