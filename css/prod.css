@@ -14,35 +14,81 @@ p{
     overflow: hidden;
 }
 
-/*@keyframes marquee {
-    from {
-        transform: translateX(64%);
-    }
-    to {
-        transform: translateX(-65%);
-    }
-}*/
-
-
 .grid-container {
+    margin-top: -10in;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, 250px);
-    gap: 10px;
+    column-gap: 30px;
+    row-gap: 20px;
     padding-left: 250px;
     padding-right: 250px;
 }
+
 .grid-item {
+    width: 223px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f0f0f0;
-    padding: 20px;
+    padding: 95px 20px 73px 20px;
     text-align: center;
     font-family: Arial, sans-serif;
-    border: 1px solid #ccc;
+    border: 2px solid black;
+    border-radius: 9px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
 .grid-item img {
+    padding-bottom: 26px;
     max-width: 250px;
     height: auto;
+}
+
+.grid-item a {
+    font-family: "Source Serif 4", serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+}
+
+aside {
+    width: 250px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-right: 2px solid #000000;
+    border-radius: 12px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h3 {
+    margin-top: 0;
+}
+
+.filter-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-section li {
+    margin-bottom: 10px;
+}
+
+.filter-section li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.filter-section li a:hover {
+    color: #BF5B21;
 }
