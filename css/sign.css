@@ -5,7 +5,8 @@
 
 body {
     margin: 0;
-    background-color: #f5f5f5;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(209,200,200,1) 50%, rgba(189,183,183,1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +36,8 @@ header {
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-    background: #2E2D3E;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 14%, rgba(42,42,42,1) 57%, rgba(84,84,84,1) 100%);
     margin-top: 14px;
 }
 
@@ -211,7 +213,10 @@ header > * {
 .form-section {
     width: 50%;
     padding: 30px;
-    background: #312F45;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(193,185,185,1) 50%, rgba(136,130,130,1) 100%);
+    /*background-image: url("https://previews.123rf.com/images/tatianakost/tatianakost1608/tatianakost160800113/61468585-fashion-illustration-vector-hand-drawn-fashionable-women-clothes-and-accessories-hanging-on-rope.jpg");*/
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -222,12 +227,12 @@ h2 {
     font-weight: 700;
     margin-bottom: 7px;
     margin-top: 9px;
-    color: white;
+    color: #000000;
 }
 
 p {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgb(0, 0, 0);
 }
 
 form {
@@ -243,7 +248,7 @@ input[type="password"] {
     border-radius: 10px;
     border: none;
     margin: 10px 0;
-    background: #403E55;
+    background: rgba(23, 22, 22, 0.74);
     color: white;
     font-size: 1rem;
 }
@@ -251,7 +256,7 @@ input[type="password"] {
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="password"]::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .terms {
@@ -268,7 +273,7 @@ input[type="password"]::placeholder {
 
 button[type="submit"] {
     padding: 14px;
-    background: #6A5ACD;
+    background: rgba(0, 0, 0, 0.85);
     color: white;
     border: none;
     border-radius: 8px;
@@ -280,7 +285,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background: #7D6CFF;
+    background: #000000;
 }
 
 .social-buttons {
@@ -293,8 +298,8 @@ button[type="submit"]:hover {
     flex: 1;
     padding: 12px;
     margin: 0 8px;
-    background: white;
-    color: #2E2D3E;
+    background: rgba(0, 0, 0, 0.76);
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -311,9 +316,8 @@ button[type="submit"]:hover {
 
 a{
     text-decoration: none;
-    color: white;
+    color: black;
 }
-
 
 /** {*/
 /*    box-sizing: border-box;*/
