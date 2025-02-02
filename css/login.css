@@ -264,6 +264,7 @@ h2 {
     font-weight: 700;
     margin-bottom: 7px;
     margin-top: 9px;
+    color: whitesmoke;
 }
 
 p {
@@ -350,7 +351,10 @@ button[type="submit"]:hover {
     margin-right: 8px;
 }
 
-
+a{
+    text-decoration: none;
+    color: white;
+}
 
 
 /** {*/
