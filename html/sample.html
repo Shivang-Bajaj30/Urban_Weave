@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #e0e0e0, #c0c0c0);
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            height: 90vh;
+            background: #f2f2f2;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        .left-panel {
+            background: #1c1c1c;
+            color: white;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .left-panel h1 {
+            font-size: 3rem;
+            color: white;
+            text-align: center;
+        }
+        .left-panel span {
+            color: red;
+        }
+        .right-panel {
+            background: #e9e9e9;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #ddd;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        button {
+            background: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background: #333;
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 15px;
+        }
+        .social-buttons button {
+            flex: 1;
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .google {
+            background: #DB4437;
+            color: white;
+        }
+        .apple {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left-panel">
+        <h1>Become an <span>UrbanWeaver</span> today</h1>
+    </div>
+    <div class="right-panel">
+        <div class="form-container">
+            <h2>Create an account</h2>
+            <p>Already have an account? <a href="#">Log in</a></p>
+            <form>
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Enter your password">
+                <button type="submit">Create account</button>
+            </form>
+            <p>Or register with</p>
+            <div class="social-buttons">
+                <button class="google">Google</button>
+                <button class="apple">Apple</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

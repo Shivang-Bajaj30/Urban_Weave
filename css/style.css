@@ -40,6 +40,7 @@ header {
 
 .nav_links li {
     margin-right: 51px; /* Adjusted spacing between menu items */
+
 }
 
 .nav_links li:last-child {
