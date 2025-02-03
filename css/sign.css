@@ -618,3 +618,6 @@ form button:hover {
     background-color: var(--primary-color);
     color: var(--button-text);
 }
+a{
+    text-decoration: none;
+}
