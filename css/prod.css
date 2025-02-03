@@ -6,6 +6,7 @@ p{
     font-family: "Source Serif 4", serif;
     text-align: center;
 }
+
 #marquee{
     font-family: "Source Serif 4", serif;
     animation: marquee 10s ease-in-out infinite;
@@ -15,13 +16,13 @@ p{
 }
 
 .grid-container {
-    margin-top: -10in;
+    margin-top: -11.5in;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, 250px);
     column-gap: 30px;
     row-gap: 20px;
-    padding-left: 250px;
+    padding-left: 363px;
     padding-right: 250px;
 }
 
@@ -31,7 +32,7 @@ p{
     justify-content: center;
     align-items: center;
     background-color: #f0f0f0;
-    padding: 95px 20px 73px 20px;
+    padding: 49px 19px 46px 20px;
     text-align: center;
     font-family: Arial, sans-serif;
     border: 2px solid black;
@@ -59,11 +60,13 @@ p{
 }
 
 aside {
+    margin-top: -27px;
+    height: 12in;
     width: 250px;
     padding: 20px;
     background-color: #f8f8f8;
     border-right: 2px solid #000000;
-    border-radius: 12px;
+    /*border-radius: 12px;*/
 }
 
 .filter-section {
