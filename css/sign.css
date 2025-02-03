@@ -1,520 +1,519 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
+/** {*/
+/*    box-sizing: border-box;*/
+/*    font-family: 'Inter', sans-serif;*/
+/*}*/
 
-body {
-    margin: 0;
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(209,200,200,1) 50%, rgba(189,183,183,1) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    padding-top: 80px; /* Adjust this value based on the height of your header */
-}
+/*body {*/
+/*    margin: 0;*/
+/*    background: rgb(255,255,255);*/
+/*    background: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(209,200,200,1) 50%, rgba(189,183,183,1) 100%);*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    min-height: 100vh;*/
+/*    flex-direction: column;*/
+/*    padding-top: 80px; !* Adjust this value based on the height of your header *!*/
+/*}*/
 
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative; /* Ensure header is not fixed */
-    z-index: 1;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 960px;
-    width: 100%;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 14%, rgba(42,42,42,1) 57%, rgba(84,84,84,1) 100%);
-    margin-top: 14px;
-}
-
-
-
-
-.logo-container {
-    /* Optional: Add styles for the logo container */
-}
-
-.logo {
-    height: 50px;
-    cursor: pointer;
-    margin-right: 34px; /* Gap between logo and HOME */
-}
-
-.nav_links {
-    display: flex;
-    list-style: none;
-}
-
-.nav_links li {
-    margin-right: 51px; /* Adjusted spacing between menu items */
-}
-
-.nav_links li:last-child {
-    margin-right: 0; /* No gap after the last menu item */
-}
-
-.nav_links li a {
-    font-family: "Source Serif 4", serif;
-    font-weight: 500;
-    font-size: 18px;
-    color: black;
-    text-decoration: none;
-    position: relative;
-    padding: 8px 0;
-    transition: color 0.3s; /* Smooth transition for color change */
-}
-
-.nav_links li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    display: block;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 3px;
-    background: var(--color-1); /* Your desired underline color */
-    transition: width 0.2s;
-}
-
-.nav_links li a:hover::after {
-    width: 100%;
-}
-
-.nav_links li a:hover {
-    color: var(--color-1);
-}
-
-.contain {
-    display: flex;
-    justify-content: flex-end;
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-.contain input[type="text"] {
-    width: 100%;
-    max-width: 236px;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 25px;
-    border: 1px solid #ccc;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.contain input[type="text"]:focus {
-    border-color: var(--color-1);
-    box-shadow: 0 0 5px var(--color-1);
-}
-
-.cta {
-    display: flex;
-    gap: 10px;
-}
-
-.cta .button {
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.cta .button a {
-    text-decoration: none;
-    color: white;
-}
-
-.cta .button:hover {
-    background-color: white;
-}
-
-.cta .button:hover a {
-    color: black;
-}
-
-header > * {
-    display: flex;
-    align-items: center;
-}
+/*header {*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    background-color: var(--background);*/
+/*    padding: 10px 20px;*/
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+/*    position: relative; !* Ensure header is not fixed *!*/
+/*    z-index: 1;*/
+/*}*/
 
 /*.container {*/
 /*    display: flex;*/
 /*    justify-content: center;*/
 /*    align-items: center;*/
-/*    flex-grow: 1; !* This makes the container take up the available space *!*/
-/*    max-width: 960px;*/
-/*    width: 80%;*/
-/*    margin: 0 auto;*/
-/*    border-radius: 24px;*/
-/*    overflow: hidden;*/
-/*    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);*/
-/*    background: #2E2D3E;*/
-/*}*/
-
-.image-section {
-    background: url('https://source.unsplash.com/600x600/?desert') no-repeat center;
-    background-size: cover;
-    width: 50%;
-    position: relative;
-    padding: 32px;
-}
-
-.image-section button {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    padding: 10px 18px;
-    border-radius: 16px;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.image-section button:hover {
-    background: rgba(255, 255, 255, 0.9);
-    color: #1C1B29;
-}
-
-.image-section .caption {
-    position: absolute;
-    bottom: 24px;
-    left: 24px;
-    color: white;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-}
-
-.image-section .caption h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-.form-section {
-    width: 50%;
-    padding: 30px;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(193,185,185,1) 50%, rgba(136,130,130,1) 100%);
-    /*background-image: url("https://previews.123rf.com/images/tatianakost/tatianakost1608/tatianakost160800113/61468585-fashion-illustration-vector-hand-drawn-fashionable-women-clothes-and-accessories-hanging-on-rope.jpg");*/
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 7px;
-    margin-top: 9px;
-    color: #000000;
-}
-
-p {
-    font-size: 0.95rem;
-    color: rgb(0, 0, 0);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 16px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    padding: 14px;
-    border-radius: 10px;
-    border: none;
-    margin: 10px 0;
-    background: rgba(23, 22, 22, 0.74);
-    color: white;
-    font-size: 1rem;
-}
-
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-input[type="password"]::placeholder {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.terms {
-    display: flex;
-    align-items: center;
-    margin: 12px 0;
-    font-size: 0.9rem;
-}
-
-.terms a {
-    color: #8477FF;
-    text-decoration: none;
-}
-
-button[type="submit"] {
-    padding: 14px;
-    background: rgba(0, 0, 0, 0.85);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 12px;
-}
-
-button[type="submit"]:hover {
-    background: #000000;
-}
-
-.social-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1px;
-}
-
-.social-buttons button {
-    flex: 1;
-    padding: 12px;
-    margin: 0 8px;
-    background: rgba(0, 0, 0, 0.76);
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-buttons button img {
-    width: 20px;
-    margin-right: 8px;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-
-* {
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-.contain {
-    display: flex;
-    justify-content: flex-end;
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-.contain input[type="text"] {
-    width: 100%;
-    max-width: 236px;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 25px;
-    border: 1px solid #ccc;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.contain input[type="text"]:focus {
-    border-color: var(--color-1);
-    box-shadow: 0 0 5px var(--color-1);
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f5f5f5;
-}
-
-.container {
-    display: flex;
-    max-width: 960px;
-    width: 100%;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-    background: #2E2D3E;
-    margin: auto;
-}
-
-/*.container {*/
-/*    display: flex;*/
 /*    max-width: 960px;*/
 /*    width: 100%;*/
 /*    border-radius: 24px;*/
 /*    overflow: hidden;*/
 /*    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);*/
-/*    background: #2E2D3E;*/
+/*    background: rgb(0,0,0);*/
+/*    background: linear-gradient(0deg, rgba(0,0,0,1) 14%, rgba(42,42,42,1) 57%, rgba(84,84,84,1) 100%);*/
+/*    margin-top: 14px;*/
 /*}*/
 
-.image-section {
-    background: url('https://source.unsplash.com/600x600/?desert') no-repeat center;
-    background-size: cover;
-    width: 50%;
-    position: relative;
-    padding: 32px;
-}
 
-.image-section button {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    padding: 10px 18px;
-    border-radius: 16px;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.image-section button:hover {
-    background: rgba(255, 255, 255, 0.9);
-    color: #1C1B29;
-}
 
-.image-section .caption {
-    position: absolute;
-    bottom: 24px;
-    left: 24px;
-    color: white;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-}
+/*.logo-container {*/
+/*    !* Optional: Add styles for the logo container *!*/
+/*}*/
 
-.image-section .caption h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
+/*.logo {*/
+/*    height: 50px;*/
+/*    cursor: pointer;*/
+/*    margin-right: 34px; !* Gap between logo and HOME *!*/
+/*}*/
 
-.form-section {
-    width: 50%;
-    padding: 60px;
-    background: #312F45;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+/*.nav_links {*/
+/*    display: flex;*/
+/*    list-style: none;*/
+/*}*/
 
-h2 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
+/*.nav_links li {*/
+/*    margin-right: 51px; !* Adjusted spacing between menu items *!*/
+/*}*/
 
-p {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.7);
-}
+/*.nav_links li:last-child {*/
+/*    margin-right: 0; !* No gap after the last menu item *!*/
+/*}*/
 
-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 16px;
-}
+/*.nav_links li a {*/
+/*    font-family: "Source Serif 4", serif;*/
+/*    font-weight: 500;*/
+/*    font-size: 18px;*/
+/*    color: black;*/
+/*    text-decoration: none;*/
+/*    position: relative;*/
+/*    padding: 8px 0;*/
+/*    transition: color 0.3s; !* Smooth transition for color change *!*/
+/*}*/
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    padding: 14px;
-    border-radius: 10px;
-    border: none;
-    margin: 10px 0;
-    background: #403E55;
-    color: white;
-    font-size: 1rem;
-}
+/*.nav_links li a::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 0;*/
+/*    height: 2px;*/
+/*    display: block;*/
+/*    margin: auto;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 3px;*/
+/*    background: var(--color-1); !* Your desired underline color *!*/
+/*    transition: width 0.2s;*/
+/*}*/
 
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-input[type="password"]::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
+/*.nav_links li a:hover::after {*/
+/*    width: 100%;*/
+/*}*/
 
-.terms {
-    display: flex;
-    align-items: center;
-    margin: 12px 0;
-    font-size: 0.9rem;
-}
+/*.nav_links li a:hover {*/
+/*    color: var(--color-1);*/
+/*}*/
 
-.terms a {
-    color: #8477FF;
-    text-decoration: none;
-}
+/*.contain {*/
+/*    display: flex;*/
+/*    justify-content: flex-end;*/
+/*    margin-left: auto;*/
+/*    margin-right: 20px;*/
+/*}*/
 
-button[type="submit"] {
-    padding: 14px;
-    background: #6A5ACD;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 12px;
-}
+/*.contain input[type="text"] {*/
+/*    width: 100%;*/
+/*    max-width: 236px;*/
+/*    padding: 10px 15px;*/
+/*    font-size: 16px;*/
+/*    border-radius: 25px;*/
+/*    border: 1px solid #ccc;*/
+/*    outline: none;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
 
-button[type="submit"]:hover {
-    background: #7D6CFF;
-}
+/*.contain input[type="text"]:focus {*/
+/*    border-color: var(--color-1);*/
+/*    box-shadow: 0 0 5px var(--color-1);*/
+/*}*/
 
-.social-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 24px;
-}
+/*.cta {*/
+/*    display: flex;*/
+/*    gap: 10px;*/
+/*}*/
 
-.social-buttons button {
-    flex: 1;
-    padding: 12px;
-    margin: 0 8px;
-    background: white;
-    color: #2E2D3E;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/*.cta .button {*/
+/*    padding: 10px 20px;*/
+/*    border-radius: 25px;*/
+/*    font-size: 16px;*/
+/*    transition: background-color 0.3s ease, color 0.3s ease;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*}*/
 
-.social-buttons button img {
-    width: 20px;
-    margin-right: 8px;
-}
+/*.cta .button a {*/
+/*    text-decoration: none;*/
+/*    color: white;*/
+/*}*/
+
+/*.cta .button:hover {*/
+/*    background-color: white;*/
+/*}*/
+
+/*.cta .button:hover a {*/
+/*    color: black;*/
+/*}*/
+
+/*header > * {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*!*.container {*!*/
+/*!*    display: flex;*!*/
+/*!*    justify-content: center;*!*/
+/*!*    align-items: center;*!*/
+/*!*    flex-grow: 1; !* This makes the container take up the available space *!*!*/
+/*!*    max-width: 960px;*!*/
+/*!*    width: 80%;*!*/
+/*!*    margin: 0 auto;*!*/
+/*!*    border-radius: 24px;*!*/
+/*!*    overflow: hidden;*!*/
+/*!*    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);*!*/
+/*!*    background: #2E2D3E;*!*/
+/*!*}*!*/
+
+/*.image-section {*/
+/*    background: url('https://source.unsplash.com/600x600/?desert') no-repeat center;*/
+/*    background-size: cover;*/
+/*    width: 50%;*/
+/*    position: relative;*/
+/*    padding: 32px;*/
+/*}*/
+
+/*.image-section button {*/
+/*    position: absolute;*/
+/*    top: 24px;*/
+/*    left: 24px;*/
+/*    background: transparent;*/
+/*    border: 1px solid rgba(255, 255, 255, 0.8);*/
+/*    padding: 10px 18px;*/
+/*    border-radius: 16px;*/
+/*    color: white;*/
+/*    cursor: pointer;*/
+/*    transition: 0.3s;*/
+/*}*/
+
+/*.image-section button:hover {*/
+/*    background: rgba(255, 255, 255, 0.9);*/
+/*    color: #1C1B29;*/
+/*}*/
+
+/*.image-section .caption {*/
+/*    position: absolute;*/
+/*    bottom: 24px;*/
+/*    left: 24px;*/
+/*    color: white;*/
+/*    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);*/
+/*}*/
+
+/*.image-section .caption h2 {*/
+/*    font-size: 2.5rem;*/
+/*    font-weight: 700;*/
+/*}*/
+
+/*.form-section {*/
+/*    width: 50%;*/
+/*    padding: 30px;*/
+/*    background: rgb(255,255,255);*/
+/*    background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(193,185,185,1) 50%, rgba(136,130,130,1) 100%);*/
+/*    !*background-image: url("https://previews.123rf.com/images/tatianakost/tatianakost1608/tatianakost160800113/61468585-fashion-illustration-vector-hand-drawn-fashionable-women-clothes-and-accessories-hanging-on-rope.jpg");*!*/
+/*    background-size: cover;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*h2 {*/
+/*    font-size: 2.2rem;*/
+/*    font-weight: 700;*/
+/*    margin-bottom: 7px;*/
+/*    margin-top: 9px;*/
+/*    color: #000000;*/
+/*}*/
+
+/*p {*/
+/*    font-size: 0.95rem;*/
+/*    color: rgb(0, 0, 0);*/
+/*}*/
+
+/*form {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    margin-top: 16px;*/
+/*}*/
+
+/*input[type="text"],*/
+/*input[type="email"],*/
+/*input[type="password"] {*/
+/*    padding: 14px;*/
+/*    border-radius: 10px;*/
+/*    border: none;*/
+/*    margin: 10px 0;*/
+/*    background: rgba(23, 22, 22, 0.74);*/
+/*    color: white;*/
+/*    font-size: 1rem;*/
+/*}*/
+
+/*input[type="text"]::placeholder,*/
+/*input[type="email"]::placeholder,*/
+/*input[type="password"]::placeholder {*/
+/*    color: rgba(255, 255, 255, 0.8);*/
+/*}*/
+
+/*.terms {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    margin: 12px 0;*/
+/*    font-size: 0.9rem;*/
+/*}*/
+
+/*.terms a {*/
+/*    color: #8477FF;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*button[type="submit"] {*/
+/*    padding: 14px;*/
+/*    background: rgba(0, 0, 0, 0.85);*/
+/*    color: white;*/
+/*    border: none;*/
+/*    border-radius: 8px;*/
+/*    font-weight: 600;*/
+/*    font-size: 1rem;*/
+/*    cursor: pointer;*/
+/*    transition: 0.3s;*/
+/*    margin-top: 12px;*/
+/*}*/
+
+/*button[type="submit"]:hover {*/
+/*    background: #000000;*/
+/*}*/
+
+/*.social-buttons {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    margin-top: 1px;*/
+/*}*/
+
+/*.social-buttons button {*/
+/*    flex: 1;*/
+/*    padding: 12px;*/
+/*    margin: 0 8px;*/
+/*    background: rgba(0, 0, 0, 0.76);*/
+/*    color: #ffffff;*/
+/*    border: none;*/
+/*    border-radius: 8px;*/
+/*    cursor: pointer;*/
+/*    font-weight: 600;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.social-buttons button img {*/
+/*    width: 20px;*/
+/*    margin-right: 8px;*/
+/*}*/
+
+/*a{*/
+/*    text-decoration: none;*/
+/*    color: black;*/
+/*}*/
+
+/*!** {*!*/
+/*!*    box-sizing: border-box;*!*/
+/*!*    font-family: 'Inter', sans-serif;*!*/
+/*!*}*!*/
+
+/*!*.contain {*!*/
+/*!*    display: flex;*!*/
+/*!*    justify-content: flex-end;*!*/
+/*!*    margin-left: auto;*!*/
+/*!*    margin-right: 20px;*!*/
+/*!*}*!*/
+
+/*!*.contain input[type="text"] {*!*/
+/*!*    width: 100%;*!*/
+/*!*    max-width: 236px;*!*/
+/*!*    padding: 10px 15px;*!*/
+/*!*    font-size: 16px;*!*/
+/*!*    border-radius: 25px;*!*/
+/*!*    border: 1px solid #ccc;*!*/
+/*!*    outline: none;*!*/
+/*!*    transition: all 0.3s ease;*!*/
+/*!*}*!*/
+
+/*!*.contain input[type="text"]:focus {*!*/
+/*!*    border-color: var(--color-1);*!*/
+/*!*    box-shadow: 0 0 5px var(--color-1);*!*/
+/*!*}*!*/
+
+/*!*body {*!*/
+/*!*    display: flex;*!*/
+/*!*    justify-content: center;*!*/
+/*!*    align-items: center;*!*/
+/*!*    min-height: 100vh;*!*/
+/*!*    margin: 0;*!*/
+/*!*    background-color: #f5f5f5;*!*/
+/*!*}*!*/
+
+/*!*.container {*!*/
+/*!*    display: flex;*!*/
+/*!*    max-width: 960px;*!*/
+/*!*    width: 100%;*!*/
+/*!*    border-radius: 24px;*!*/
+/*!*    overflow: hidden;*!*/
+/*!*    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);*!*/
+/*!*    background: #2E2D3E;*!*/
+/*!*    margin: auto;*!*/
+/*!*}*!*/
+
+/*!*!*.container {*!*!*/
+/*!*!*    display: flex;*!*!*/
+/*!*!*    max-width: 960px;*!*!*/
+/*!*!*    width: 100%;*!*!*/
+/*!*!*    border-radius: 24px;*!*!*/
+/*!*!*    overflow: hidden;*!*!*/
+/*!*!*    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);*!*!*/
+/*!*!*    background: #2E2D3E;*!*!*/
+/*!*!*}*!*!*/
+
+/*!*.image-section {*!*/
+/*!*    background: url('https://source.unsplash.com/600x600/?desert') no-repeat center;*!*/
+/*!*    background-size: cover;*!*/
+/*!*    width: 50%;*!*/
+/*!*    position: relative;*!*/
+/*!*    padding: 32px;*!*/
+/*!*}*!*/
+
+/*!*.image-section button {*!*/
+/*!*    position: absolute;*!*/
+/*!*    top: 24px;*!*/
+/*!*    left: 24px;*!*/
+/*!*    background: transparent;*!*/
+/*!*    border: 1px solid rgba(255, 255, 255, 0.8);*!*/
+/*!*    padding: 10px 18px;*!*/
+/*!*    border-radius: 16px;*!*/
+/*!*    color: white;*!*/
+/*!*    cursor: pointer;*!*/
+/*!*    transition: 0.3s;*!*/
+/*!*}*!*/
+
+/*!*.image-section button:hover {*!*/
+/*!*    background: rgba(255, 255, 255, 0.9);*!*/
+/*!*    color: #1C1B29;*!*/
+/*!*}*!*/
+
+/*!*.image-section .caption {*!*/
+/*!*    position: absolute;*!*/
+/*!*    bottom: 24px;*!*/
+/*!*    left: 24px;*!*/
+/*!*    color: white;*!*/
+/*!*    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);*!*/
+/*!*}*!*/
+
+/*!*.image-section .caption h2 {*!*/
+/*!*    font-size: 2.5rem;*!*/
+/*!*    font-weight: 700;*!*/
+/*!*}*!*/
+
+/*!*.form-section {*!*/
+/*!*    width: 50%;*!*/
+/*!*    padding: 60px;*!*/
+/*!*    background: #312F45;*!*/
+/*!*    display: flex;*!*/
+/*!*    flex-direction: column;*!*/
+/*!*    justify-content: center;*!*/
+/*!*}*!*/
+
+/*!*h2 {*!*/
+/*!*    font-size: 2.4rem;*!*/
+/*!*    font-weight: 700;*!*/
+/*!*    margin-bottom: 8px;*!*/
+/*!*}*!*/
+
+/*!*p {*!*/
+/*!*    font-size: 0.95rem;*!*/
+/*!*    color: rgba(255, 255, 255, 0.7);*!*/
+/*!*}*!*/
+
+/*!*form {*!*/
+/*!*    display: flex;*!*/
+/*!*    flex-direction: column;*!*/
+/*!*    margin-top: 16px;*!*/
+/*!*}*!*/
+
+/*!*input[type="text"],*!*/
+/*!*input[type="email"],*!*/
+/*!*input[type="password"] {*!*/
+/*!*    padding: 14px;*!*/
+/*!*    border-radius: 10px;*!*/
+/*!*    border: none;*!*/
+/*!*    margin: 10px 0;*!*/
+/*!*    background: #403E55;*!*/
+/*!*    color: white;*!*/
+/*!*    font-size: 1rem;*!*/
+/*!*}*!*/
+
+/*!*input[type="text"]::placeholder,*!*/
+/*!*input[type="email"]::placeholder,*!*/
+/*!*input[type="password"]::placeholder {*!*/
+/*!*    color: rgba(255, 255, 255, 0.6);*!*/
+/*!*}*!*/
+
+/*!*.terms {*!*/
+/*!*    display: flex;*!*/
+/*!*    align-items: center;*!*/
+/*!*    margin: 12px 0;*!*/
+/*!*    font-size: 0.9rem;*!*/
+/*!*}*!*/
+
+/*!*.terms a {*!*/
+/*!*    color: #8477FF;*!*/
+/*!*    text-decoration: none;*!*/
+/*!*}*!*/
+
+/*!*button[type="submit"] {*!*/
+/*!*    padding: 14px;*!*/
+/*!*    background: #6A5ACD;*!*/
+/*!*    color: white;*!*/
+/*!*    border: none;*!*/
+/*!*    border-radius: 8px;*!*/
+/*!*    font-weight: 600;*!*/
+/*!*    font-size: 1rem;*!*/
+/*!*    cursor: pointer;*!*/
+/*!*    transition: 0.3s;*!*/
+/*!*    margin-top: 12px;*!*/
+/*!*}*!*/
+
+/*!*button[type="submit"]:hover {*!*/
+/*!*    background: #7D6CFF;*!*/
+/*!*}*!*/
+
+/*!*.social-buttons {*!*/
+/*!*    display: flex;*!*/
+/*!*    justify-content: space-between;*!*/
+/*!*    margin-top: 24px;*!*/
+/*!*}*!*/
+
+/*!*.social-buttons button {*!*/
+/*!*    flex: 1;*!*/
+/*!*    padding: 12px;*!*/
+/*!*    margin: 0 8px;*!*/
+/*!*    background: white;*!*/
+/*!*    color: #2E2D3E;*!*/
+/*!*    border: none;*!*/
+/*!*    border-radius: 8px;*!*/
+/*!*    cursor: pointer;*!*/
+/*!*    font-weight: 600;*!*/
+/*!*    display: flex;*!*/
+/*!*    align-items: center;*!*/
+/*!*    justify-content: center;*!*/
+/*!*}*!*/
+
+/*!*.social-buttons button img {*!*/
+/*!*    width: 20px;*!*/
+/*!*    margin-right: 8px;*!*/
+/*!*}*!*/
 
 
 :root {
@@ -618,7 +617,4 @@ form button:hover {
 .social-buttons button:hover {
     background-color: var(--primary-color);
     color: var(--button-text);
-}
-a{
-    text-decoration: none;
 }
