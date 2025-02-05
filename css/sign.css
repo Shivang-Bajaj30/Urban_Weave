@@ -519,7 +519,7 @@
 :root {
     --background: #ece9e6;
     --secondary-color: #ffffff;
-    --primary-color: #BF5B21;
+    --primary-color: #ff0000;
     --text-color: #333;
     --button-bg: #000;
     --button-text: #fff;
@@ -538,19 +538,21 @@
 .left-section, .right-section {
     flex: 1;
     max-width: 432px;
-    padding: 40px;
+    padding: 25px;
     border-radius: 10px;
 }
 
 .left-section {
-    background-color: var(--button-bg);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 14%, rgba(42,42,42,1) 57%, rgba(84,84,84,1) 100%);
     color: var(--button-text);
-    height: 4.75in;
+    height: 505px;
 }
 
 .left-section h1 {
     font-size: 36px;
-    margin: 0;
+    position: relative;
+    top: 126px;
 }
 
 .highlight {
@@ -558,8 +560,8 @@
 }
 
 .right-section {
-    background-color: var(--secondary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(193,185,185,1) 50%, rgba(136,130,130,1) 100%);
 }
 
 .right-section h2 {
@@ -584,14 +586,33 @@ form input {
     font-size: 16px;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin: 5px 0;
+    background: rgba(23, 22, 22, 0.8);
+    color: white;
+    font-size: 15px;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 form button {
-    padding: 10px 15px;
+    padding: 10px;
     border: none;
     background-color: var(--button-bg);
     color: var(--button-text);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
 }
 
 form button:hover {
@@ -599,7 +620,7 @@ form button:hover {
     color: var(--secondary-color);
 }
 
-.social-buttons {
+/*.social-buttons {
     display: flex;
     gap: 10px;
 }
@@ -617,7 +638,35 @@ form button:hover {
 .social-buttons button:hover {
     background-color: var(--primary-color);
     color: var(--button-text);
-}
+}*/
 a{
-    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+}
+
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1px;
+}
+
+.social-buttons button {
+    flex: 1;
+    padding: 12px;
+    margin: 0 8px;
+    background: rgba(0, 0, 0, 0.76);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-buttons button img {
+    width: 20px;
+    margin-right: 8px;
 }
