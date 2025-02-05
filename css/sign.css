@@ -546,7 +546,7 @@
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 14%, rgba(42,42,42,1) 57%, rgba(84,84,84,1) 100%);
     color: var(--button-text);
-    height: 505px;
+    height: 514px;
 }
 
 .left-section h1 {
@@ -593,7 +593,7 @@ input[type="password"] {
     border-radius: 10px;
     border: none;
     margin: 5px 0;
-    background: rgba(23, 22, 22, 0.8);
+    background: rgba(23, 22, 22, 0.73);
     color: white;
     font-size: 15px;
 }

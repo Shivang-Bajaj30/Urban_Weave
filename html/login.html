@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
         </ul>
     </nav>
 
-    <div class="contain">
+    <div class="cont">
         <input placeholder="Search..." class="js-search" type="text">
     </div>
 
@@ -37,27 +37,29 @@
 </header>
 
 <div class="container">
-    <div class="image-section">
-        <div class="caption">
-            <h2>Log back in, right where you left</h2><br>
-        </div>
+    <div class="left-section">
+        <h1>Jump right back in <span class="highlight">UrbanWeaver</span>, right where you left</h1>
     </div>
-
-    <div class="form-section">
-        <h2>Login</h2>
-        <p>Do not have an account? <a href="signup.html">Create One</a></p>
+    <div class="right-section">
+        <h2>Log in</h2>
+        <p>Start your journey with UrbanWeaver, <a href="signup.html">Create an account</a></p>
         <form>
             <input type="email" placeholder="Email" required>
             <input type="password" placeholder="Enter your password" required>
             <button type="submit">Log in</button>
         </form>
-
-        <p style="text-align: center; margin-top: 16px;">Or register with</p>
-
+        <p>Or log on with</p>
         <div class="social-buttons">
-            <button><img src="https://img.icons8.com/color/48/google-logo.png" alt="Google"> Google</button>
-            <button><img src="https://img.icons8.com/ios-filled/48/000000/mac-os.png" alt="Apple"> Apple</button>
+            <button class="google-btn">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm8YyJuLna_s8bC0u8NCv_Gi51ejusYjzHsg&s" alt="Google">
+                Google
+            </button>
+            <button class="apple-btn">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyvnKdTV3eiNwXAvVIxkv7y82Dc0-yd901xA&s" alt="Apple">
+                Apple
+            </button>
         </div>
+
     </div>
 </div>
 </body>
