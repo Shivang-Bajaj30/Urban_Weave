@@ -148,6 +148,21 @@ a{
     align-items: center;
     justify-content: center;
 }
+.social-buttons button:hover {
+    flex: 1;
+    padding: 12px;
+    margin: 0 8px;
+    background: rgb(119, 116, 116);
+    color: #fffdfd;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-out;
+}
 
 .social-buttons button img {
     width: 20px;
