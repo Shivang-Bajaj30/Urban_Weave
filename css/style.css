@@ -115,21 +115,14 @@ header {
     transition: background-color 0.3s ease, color 0.3s ease;
     background-color: black;
     color: white;
+    text-decoration: none;
     border: none;
     cursor: pointer;
 }
 
-.cta .button a {
-    /*font-weight: bold;*/
-    text-decoration: none;
-    color: white;
-}
-
-.cta .button:hover {
+.cta a:hover {
     background-color: white;
-    a {
-        color: black;
-    }
+    color: black;
 }
 
 header > * {
