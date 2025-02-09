@@ -95,7 +95,6 @@ aside {
     color: #BF5B21;
 }
 
-/* Style the menu */
 #menu {
     position: fixed;
     top: 0;
@@ -106,12 +105,10 @@ aside {
     transition: left 0.5s ease;
 }
 
-/* Menu visible */
 #menu.visible {
     left: 0;
 }
 
-/* Style the button */
 #toggleButton {
     position: fixed;
     top: 10px;
