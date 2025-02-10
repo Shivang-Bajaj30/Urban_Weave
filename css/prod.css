@@ -8,13 +8,6 @@ p {
     text-align: center;
 }
 
-#marquee {
-    font-family: "Source Serif 4", serif;
-    animation: marquee 10s ease-in-out infinite;
-    color: red;
-    white-space: nowrap;
-    overflow: hidden;
-}
 
 .grid-container {
     display: grid;
@@ -62,10 +55,10 @@ p {
 aside {
     height: 100%;
     width: 250px;
-    padding: 20px;
+    /*padding: 20px;*/
     background-color: #f8f8f8;
     border-right: 2px solid #000000;
-    overflow-y: auto; /* Enable scrolling */
+    /*overflow-y: auto; !* Enable scrolling *!*/
 }
 
 .filter-section {
@@ -75,6 +68,8 @@ aside {
 .filter-section h3 {
     margin-top: 0;
 }
+
+
 
 .filter-section ul {
     list-style: none;
@@ -95,27 +90,49 @@ aside {
     color: #BF5B21;
 }
 
-#menu {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #f9f9f9;
-    transition: left 0.5s ease;
-}
-
-#menu.visible {
-    left: 0;
-}
-
+/* Clean icon with no background */
 #toggleButton {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    position: absolute;
+    top: 92px; /* Adjust for better positioning below navbar */
+    left: 11px;
+    background: none;
     border: none;
-    cursor: pointer
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#toggleButton div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+/* Menu sliding effect */
+#menu {
+    position: absolute;
+    left: -300px;
+    top: 77px; /* Positioning below the navbar */
+    width: 300px;
+    height: 12.87in; /* Avoid overlapping with the header */
+    background-color: #f4f4f4;
+    transition: all .5s ease;
+    z-index: 999;
+}
+
+#menu.open {
+    left: 0;
+    padding-left: 21px;
+}
+
+#toggleButton.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#toggleButton.active div:nth-child(2) {
+    opacity: 0;
+}
+
+#toggleButton.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
