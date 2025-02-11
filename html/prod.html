@@ -42,14 +42,17 @@
     <hr><br>
 </main>
 
-<button id="toggleButton" onclick="toggleMenu()">
-    <div style="width: 25px; height: 3px; background-color: black; margin: 5px 0;"></div>
-    <div style="width: 25px; height: 3px; background-color: black; margin: 5px 0;"></div>
-    <div style="width: 25px; height: 3px; background-color: black; margin: 5px 0;"></div>
-</button>
 
-<div>
-    <aside id="menu">
+<div id="menu">
+
+
+    <button id="toggleButton" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+        <br>
         <h2>Filters</h2>
         <div class="filter-section">
             <h3>SEARCH</h3>
@@ -103,9 +106,10 @@
                 <li><a href="#">Boots</a></li>
             </ul>
         </div>
-    </aside>
 </div>
-<div class="grid-container">
+
+
+<div id="pageContent">
     <div class="grid-item">
         <a href="#">
             <img src="/images/logo.png" alt="Image 1">
