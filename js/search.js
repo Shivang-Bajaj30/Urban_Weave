@@ -22,40 +22,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
+    const checkboxes = document.querySelectorAll('.filter-options input[type="checkbox"]');
     const searchBox = document.getElementById("search-box");
-    const searchBtn = document.getElementById("search-btn");
+    const searchButton = document.getElementById("search-btn");
+    const products = document.querySelectorAll('.grid-item');
 
-    function performSearch() {
-        const query = searchBox.value.trim().toLowerCase();
-        if (query !== "") {
-            // Perform search (You can modify this part based on your needs)
-            console.log("Searching for:", query);
-
-            // Example: Filter product items
-            const products = document.querySelectorAll(".grid-item");
-            products.forEach(item => {
-                const productText = item.textContent.toLowerCase();
-                if (productText.includes(query)) {
-                    item.style.display = "block";
-                } else {
-                    item.style.display = "none";
-                }
-            });
-        }
+    // Function to normalize words (remove trailing 's' for plural/singular matching)
+    function normalize(word) {
+        return word.toLowerCase().replace(/s$/, "");
     }
 
-    // Trigger search when pressing "Enter"
+    function filterProducts() {
+        let selectedFilters = Array.from(checkboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => normalize(checkbox.parentNode.textContent.trim()));
+
+        let searchQuery = normalize(searchBox.value.trim());
+
+        products.forEach(item => {
+            let productText = normalize(item.textContent.trim());
+
+            let matchesFilter = selectedFilters.length === 0 ||
+                selectedFilters.some(filter => productText.includes(filter) || filter.includes(productText));
+
+            let matchesSearch = searchQuery === "" || productText.includes(searchQuery) || searchQuery.includes(productText);
+
+            item.style.display = (matchesFilter && matchesSearch) ? "block" : "none";
+        });
+    }
+
+    // Event listeners for checkboxes
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", filterProducts);
+    });
+
+    // Search using Enter key
     searchBox.addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
-            event.preventDefault();
-            performSearch();
+            filterProducts();
         }
     });
 
-    // Trigger search when clicking search button
-    searchBtn.addEventListener("click", function () {
-        performSearch();
-    });
+    // Search using search button click
+    searchButton.addEventListener("click", filterProducts);
+
+    filterProducts(); // Run initially
 });
