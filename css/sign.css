@@ -91,15 +91,14 @@ form button {
     border: none;
     background-color: var(--button-bg);
     color: var(--button-text);
-    border-radius: 22px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 16px;
 }
 
 form button:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: rgb(119, 116, 116);
 }
 
 /*.social-buttons {

@@ -69,13 +69,20 @@ form input {
     font-size: 16px;
 }
 
+input[type="email"] {
+    margin: 16px 0 8px 0;
+}
+
+input[type="password"] {
+    margin: -6px 0 21px 0;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
     padding: 13px;
     border-radius: 10px;
     border: none;
-    margin: 8px 0;
     background: rgba(23, 22, 22, 0.73);
     color: white;
     font-size: 15px;
@@ -100,29 +107,10 @@ form button {
 }
 
 form button:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: rgb(119, 116, 116);
 }
 
-/*.social-buttons {
-    display: flex;
-    gap: 10px;
-}
 
-.social-buttons button {
-    padding: 10px;
-    border: none;
-    background-color: #eee;
-    cursor: pointer;
-    border-radius: 5px;
-    flex: 1;
-    transition: background-color 0.3s ease;
-}
-
-.social-buttons button:hover {
-    background-color: var(--primary-color);
-    color: var(--button-text);
-}*/
 a{
     color: black;
     text-decoration: underline;
