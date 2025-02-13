@@ -14,7 +14,7 @@ p {
 
 .grid-item img {
     padding-bottom: 26px;
-    max-width: 223px;
+    max-width: 225px;
     height: auto;
 }
 
@@ -91,6 +91,7 @@ body {
     border-radius: 9px;
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
+    height: 219px;
 }
 
 #pageContent {
