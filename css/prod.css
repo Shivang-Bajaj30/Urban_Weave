@@ -56,36 +56,22 @@ p {
 }
 
 
+
 body {
     margin: 0;
     overflow-x: hidden;
 }
+
 #menu {
-    position: fixed; /* Initially scrolls with page */
-    top: 77px; /* Starts below the navbar */
-    left: 0;
-    width: 300px;
-    background-color: #DBDBDB;
-    /*overflow-y: auto; !* Enables independent scrolling *!*/
-    padding-left: 27px;
-    transition: all 0.5s ease;
-}
-
-/* Fix the menu when scrolling past navbar */
-#menu.fixed {
-    position: fixed;
+    position: absolute;
+    left: -327px;
     top: 77px;
-    height: calc(100vh - 77px);
-}
-
-
-/* When the user scrolls past the navigation bar, make it fixed */
-@media (min-width: 768px) { /* Adjust breakpoint if necessary */
-    #menu.fixed {
-        position: fixed;
-        top: 77px; /* Locks it below the nav bar */
-        height: calc(100vh - 77px);
-    }
+    width: 300px;
+    height: auto;
+    background-color: #f4f4f4;
+    transition: all 0.5s ease;
+    z-index: 999;
+    padding-left: 27px;
 }
 
 #menu.open {
