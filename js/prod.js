@@ -1,11 +1,27 @@
-window.addEventListener("scroll", function () {
-    var menu = document.getElementById("menu");
-    var navbar = document.querySelector(".navbar"); // Adjust if needed
-    var navbarOffset = navbar.offsetHeight; // Get navbar height
+function toggleSidebar() {
+    const sidebar = document.getElementById('menu');
+    const content = document.getElementById('pageContent');
+    const toggleButton = document.getElementById('toggleButton');
 
-    if (window.scrollY >= navbarOffset) {
-        menu.classList.add("fixed"); // Fix menu after reaching navbar
-    } else {
-        menu.classList.remove("fixed"); // Remove fixed when scrolling up
-    }
+
+    sidebar.classList.toggle('active');
+    content.classList.toggle('shifted');
+    toggleButton.classList.toggle('active');
+}
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    const sidebar = document.getElementById('menu');
+    const toggleButton = document.getElementById('toggleButton');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                sidebar.classList.add('fixed');
+            } else {
+                sidebar.classList.remove('fixed');
+            }
+        });
+    });
+
+    observer.observe(toggleButton);
 });

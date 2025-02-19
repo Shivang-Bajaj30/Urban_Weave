@@ -15,3 +15,4 @@ const closeButton = document.getElementById('closeButton');
 closeButton.addEventListener('click', () => {
     filterMenu.classList.toggle('hidden');
 });
+
