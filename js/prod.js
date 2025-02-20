@@ -25,3 +25,36 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     observer.observe(toggleButton);
 });
+
+document.getElementById("search-box").addEventListener("input", function() {
+    search();
+});
+
+function search(){
+    let srch = document.getElementById("search-box").value.toLowerCase();
+    let maindata = document.querySelector('.maindata');
+    let x = document.querySelectorAll('.grid-item');
+
+    // Hide the entire maindata div if the search box is not empty
+    if (srch) {
+        maindata.style.display = "none";
+    } else {
+        maindata.style.display = "block";
+    }
+
+    // Display only the matched elements and re-show the maindata div
+    let anyMatch = false;
+    for (let i = 0; i < x.length; i++) {
+        if (!x[i].innerHTML.toLowerCase().includes(srch)) {
+            x[i].style.display = "none";
+        } else {
+            x[i].style.display = "block";
+            anyMatch = true;
+        }
+    }
+
+    // Re-show the maindata div if there are matches
+    if (anyMatch) {
+        maindata.style.display = "block";
+    }
+}
