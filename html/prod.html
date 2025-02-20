@@ -29,7 +29,7 @@
     </nav>
 
     <div class="cont">
-        <input placeholder="Search..." onkeyup="search()" id="search-box" class="js-search" type="text">
+        <input placeholder="Search..." id="search-box" class="js-search" type="text">
         <button id="search-btn">
             <img src="/images/search.svg" alt="">
         </button>
@@ -60,10 +60,10 @@
         <div class="filter-section">
             <div class="filter-title">CASUALS</div>
             <div class="filter-options">
-                <label><input type="checkbox">T-Shirts</label>
-                <label><input type="checkbox">Shorts</label>
-                <label><input type="checkbox">Jeans</label>
-                <label><input type="checkbox">Jogging Suits</label>
+                <label><input type="checkbox" value="tshirts">T-Shirts</label>
+                <label><input type="checkbox" value="shorts">Shorts</label>
+                <label><input type="checkbox" value="jeans">Jeans</label>
+                <label><input type="checkbox" value="jogging-suits">Jogging Suits</label>
             </div>
         </div>
 
@@ -71,83 +71,82 @@
             <div class="filter-title">FORMALS</div>
             <div class="filter-title">MEN</div>
             <div class="filter-options">
-                <label><input type="checkbox">Shirts</label>
-                <label><input type="checkbox">Pants</label>
-                <label><input type="checkbox">Ties</label>
-                <label><input type="checkbox">Suits (Two-piece)</label>
-                <label><input type="checkbox">Suits (Three-piece)</label>
-                <label><input type="checkbox">Shoes</label>
-                <label><input type="checkbox">Blazers</label>
-                <label><input type="checkbox">Waistcoats/Vests</label>
+                <label><input type="checkbox" value="shirts">Shirts</label>
+                <label><input type="checkbox" value="pants">Pants</label>
+                <label><input type="checkbox" value="ties">Ties</label>
+                <label><input type="checkbox" value="two-piece-suits">Suits (Two-piece)</label>
+                <label><input type="checkbox" value="three-piece-suits">Suits (Three-piece)</label>
+                <label><input type="checkbox" value="shoes">Shoes</label>
+                <label><input type="checkbox" value="blazers">Blazers</label>
+                <label><input type="checkbox" value="vests">Waistcoats/Vests</label>
             </div>
 
             <div class="filter-title">WOMEN</div>
             <div class="filter-options">
-                <label><input type="checkbox">Business Suits (Pantsuit)</label>
-                <label><input type="checkbox">Formal Dresses (Gowns)</label>
-                <!--            <label><input type="checkbox">Dress Shoes (Heels, Flats)</label>-->
-                <label><input type="checkbox">Suits (Three-piece)</label>
-                <label><input type="checkbox">Shoes</label>
+                <label><input type="checkbox" value="pantsuits">Business Suits (Pantsuit)</label>
+                <label><input type="checkbox" value="gowns">Formal Dresses (Gowns)</label>
+                <label><input type="checkbox" value="two-piece-suits">Suits (Two-piece)</label>
+                <label><input type="checkbox" value="three-piece-suits">Suits (Three-piece)</label>
+                <label><input type="checkbox" value="heels">Shoes (Heels, Flats)</label>
             </div>
         </div>
 
-        <div class="filter-section">
-            <div class="filter-title">TRADITIONAL</div>
-            <div class="filter-options">
-                <label><input type="checkbox">Sarees</label>
-                <label><input type="checkbox">Lehenga</label>
-                <label><input type="checkbox">Ghagra Choli</label>
-                <label><input type="checkbox">Kurta-pajama</label>
+        <div class="filter-options">
+            <div class="filter-section">
+                <div class="filter-title">TRADITIONAL</div>
+                <label><input type="checkbox" value="saares">Sarees</label>
+                <label><input type="checkbox" value="lehengas">Lehenga</label>
+                <label><input type="checkbox" value="ghaghra-cholis">Ghagra Choli</label>
+                <label><input type="checkbox" value="kurta-pajamas">Kurta Pajamas</label>
             </div>
         </div>
 
         <div class="filter-section">
             <div class="filter-title">INDO-WESTERN</div>
             <div class="filter-options">
-                <label><input type="checkbox">Kurtis</label>
-                <label><input type="checkbox">Jodhpuri Suits</label>
-                <label><input type="checkbox">Kurtas with jackets</label>
+                <label><input type="checkbox" value="kurtis">Kurtis</label>
+                <label><input type="checkbox" value="jodhpuris">Jodhpuri Suits</label>
+                <label><input type="checkbox" value="kurta-jackets">Kurtas with jackets</label>
             </div>
         </div>
 
         <div class="filter-section">
             <div class="filter-title">FOOTWEAR</div>
             <div class="filter-options">
-                <label><input type="checkbox">Sneakers</label>
-                <label><input type="checkbox">Sports Shoes</label>
-                <label><input type="checkbox">Formal Shoes</label>
-                <label><input type="checkbox">Sandals</label>
-                <label><input type="checkbox">Heels</label>
-                <label><input type="checkbox">Boots</label>
+                <label><input type="checkbox" value="sneakers">Sneakers</label>
+                <label><input type="checkbox" value="sport-shoes">Sports Shoes</label>
+                <label><input type="checkbox" value="formal-shoes">Formal Shoes</label>
+                <label><input type="checkbox" value="sandals">Sandals</label>
+                <label><input type="checkbox" value="heels">Heels</label>
+                <label><input type="checkbox" value="boots">Boots</label>
             </div>
         </div>
     </div>
 
 
-
-
     <div id="pageContent">
         <div class="grid-item">
             <a href="#">
-                <img src="/images/logo.png" alt="Image 1"><span class="product-name">Allen Solly Cotton Shirt</span><br><hr>
+                <img src="/images/logo.png" alt="Image 1"><span class="shirts">Allen Solly Cotton Shirt</span><br><hr>
                 1200
             </a>
         </div>
-        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 2"><span class="t-shirt">Solo Leveling T-Shirt</span><br><hr>350</a></div>
-        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 3"><span class="shoes">Red Tape Boots</span><br><hr>2600</a></div>
-        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 4"><span class="shoes">Red Tape Sneakers</span><br><hr>2400</a></div>
-        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 5"><span class="suits">Raymonds Blazer</span><br><hr>3200</a></div>
-        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 6"><span class="suits">Allen Solly Two Piece Black</span><br><hr>5500</a></div>
-        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 7"><span class="ind-west">Raymonds Vest</span><br><hr>850</a></div>
-        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 8"><span class="ind-west">Jodhpuri set Black</span><br><hr>4500</a></div>
-        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 9"><span class="shoes">Womens Heels</span><br><hr>900</a></div>
+        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 2"><span class="tshirts">Solo Leveling T-Shirt</span><br><hr>350</a></div>
+        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 3"><span class="boots">Red Tape Boots</span><br><hr>2600</a></div>
+        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 4"><span class="sneakers">Red Tape Sneakers</span><br><hr>2400</a></div>
+        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 5"><span class="blazers">Raymonds Blazer</span><br><hr>3200</a></div>
+        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 6"><span class="two-piece-suits">Allen Solly Two Piece Suit</span><br><hr>5500</a></div>
+        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 7"><span class="vests">Raymonds Vest</span><br><hr>850</a></div>
+        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 8"><span class="jodhpuris">Jodhpuri set Black</span><br><hr>4500</a></div>
+        <div class="grid-item"><a href="#"><img src="/images/logo.png" alt="Image 9"><span class="heels">Womens Heels</span><br><hr>900</a></div>
     </div>
 </div>
 
 
 
-<script src="/js/script.js"></script>
 <script src="/js/search.js"></script>
 <script src="/js/prod.js"></script>
+
+
 </body>
 </html>

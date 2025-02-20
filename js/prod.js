@@ -1,60 +1,43 @@
-function toggleSidebar() {
-    const sidebar = document.getElementById('menu');
-    const content = document.getElementById('pageContent');
-    const toggleButton = document.getElementById('toggleButton');
+document.addEventListener("DOMContentLoaded", function () {
+    const checkboxes = document.querySelectorAll(".filter-options input[type='checkbox']");
+    const products = document.querySelectorAll(".grid-item");
+    const pageContent = document.getElementById("pageContent");
 
-
-    sidebar.classList.toggle('active');
-    content.classList.toggle('shifted');
-    toggleButton.classList.toggle('active');
-}
-
-
-window.addEventListener('DOMContentLoaded', (event) => {
-    const sidebar = document.getElementById('menu');
-    const toggleButton = document.getElementById('toggleButton');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                sidebar.classList.add('fixed');
-            } else {
-                sidebar.classList.remove('fixed');
-            }
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+            filterProducts();
+            window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top
         });
     });
 
-    observer.observe(toggleButton);
-});
+    function filterProducts() {
 
-document.getElementById("search-box").addEventListener("input", function() {
-    search();
-});
+        let selectedCategories = Array.from(checkboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value); // Using 'value' from checkboxes
 
-function search(){
-    let srch = document.getElementById("search-box").value.toLowerCase();
-    let maindata = document.querySelector('.maindata');
-    let x = document.querySelectorAll('.grid-item');
-
-    // Hide the entire maindata div if the search box is not empty
-    if (srch) {
-        maindata.style.display = "none";
-    } else {
-        maindata.style.display = "block";
-    }
-
-    // Display only the matched elements and re-show the maindata div
-    let anyMatch = false;
-    for (let i = 0; i < x.length; i++) {
-        if (!x[i].innerHTML.toLowerCase().includes(srch)) {
-            x[i].style.display = "none";
+        if (selectedCategories.length === 0) {
+            products.forEach(product => product.style.display = "block");
         } else {
-            x[i].style.display = "block";
-            anyMatch = true;
-        }
-    }
+            products.forEach(product => {
+                let productSpan = product.querySelector("span"); // Get the <span> inside the grid-item
+                if (productSpan) {
+                    let productCategory = productSpan.className.trim().toLowerCase(); // Get class from <span>
 
-    // Re-show the maindata div if there are matches
-    if (anyMatch) {
-        maindata.style.display = "block";
+                    if (selectedCategories.includes(productCategory)) {
+                        product.style.display = "block";
+                    } else {
+                        product.style.display = "none";
+                    }
+                }
+            });
+        }
+
+        // Align filtered products to the left
+        pageContent.style.display = "flex";
+        pageContent.style.flexWrap = "wrap";
+        pageContent.style.justifyContent = "flex-start";
+        pageContent.style.alignItems = "flex-start";
+        pageContent.style.gap = "10px"; // Adds spacing for better layout
     }
-}
+});

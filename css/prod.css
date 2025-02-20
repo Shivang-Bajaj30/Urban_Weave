@@ -54,7 +54,8 @@ body {
 #pageContent {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centers the items */
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 20px; /* Adds spacing between products */
     padding: 20px 20PX 20PX 290px;
     margin-left: auto;
@@ -64,7 +65,7 @@ body {
 }
 
 .grid-item {
-    max-width: 223px; /* Keep items compact */
+    max-width: 223px;
     text-align: center;
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
