@@ -8,23 +8,6 @@ p {
     text-align: center;
 }
 
-.grid-item:hover {
-    transform: scale(1.05);
-}
-
-.grid-item img {
-    padding-bottom: 26px;
-    max-width: 225px;
-    height: auto;
-}
-
-.grid-item a {
-    font-family: "Source Serif 4", serif;
-    font-weight: 500;
-    font-size: 18px;
-    color: black;
-    text-decoration: none;
-}
 
 .filter-section {
     margin-bottom: 20px;
@@ -62,104 +45,76 @@ body {
     overflow-x: hidden;
 }
 
+.maindata {
+    display: flex;
+    align-items: flex-start;
+}
+
 
 #pageContent {
-    position: relative;
-    top: 61px;
-    left: 80px;
-    /*margin-top: 61px;*/
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3, 250px);
-    column-gap: 30px;
-    row-gap: 20px;
-    padding-bottom: 150px;
-    transition: margin-left 0.5s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the items */
+    gap: 20px; /* Adds spacing between products */
+    padding: 20px 20PX 20PX 290px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 840px; /* Prevent overflow */
+    margin-top: 50PX;
+}
+
+.grid-item {
+    max-width: 223px; /* Keep items compact */
+    text-align: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    border: 2px solid black;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 9px;
+    padding: 49px 19px 46px 20px;
+
 
 }
 
-#pageContent.shifted {
-    margin-left: 118px;
-}
 
 
-#menu.active {
-    left: 0;
-}
 
 #menu {
     position: absolute;
     left: 39px;
     top: 202PX;
-    width: 258px;
+    width: 268px;
     transition: all 0.5s ease;
-    /*z-index: 1000;*/
+    z-index: 1000;
     padding-left: 32px;
-    height: 183vh;
+    /*height: 183vh;*/
+    height: auto;
     /* overflow-y: auto; */
     background-color: #f4f4f469;
     border-left: 2px solid #b1aaaaa1;
     border-right: 2px solid #b1aaaaa1;
 }
 
-.grid-item {
-    width: 223px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    padding: 49px 19px 46px 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    border: 2px solid black;
-    border-radius: 9px;
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-    height: 219px;
+
+.grid-item:hover {
+    transform: scale(1.05);
 }
 
-
-
-#toggleButton {
-
-    margin-top: -90px;
-    height: 50px;
-    /*padding: 23px 0 0 227px;*/
-    padding-left: 29px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-    /*margin: 0;*/
+.grid-item img {
+    padding-bottom: 29px;
+    max-width: 100%;
+    height: auto;
 }
 
-#toggleButton div {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    transition: all 0.4s ease-in-out;
-    margin: 5px 0;
+.grid-item a {
+    font-family: "Source Serif 4", serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
 }
 
-#toggleButton.active div {
-    position: sticky;
-    left: -327px;
-    top: 5PX;
-    transition: all 0.5s ease;
-    margin-left: -15px;
-}
-
-#toggleButton.active div:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 7px);
-}
-
-#toggleButton.active div:nth-child(2) {
-    opacity: 0;
-}
-
-#toggleButton.active div:nth-child(3) {
-    transform: rotate(-45deg) translate(4px, -4px);
-}
 
 /*.toggle-btn {*/
 /*    position: fixed;*/
@@ -204,3 +159,7 @@ body {
     margin-right: 8px;
 }
 
+input[type="checkbox"] {
+    appearance: auto;  /* Ensures the default checkbox UI is visible */
+    cursor: pointer;
+}
