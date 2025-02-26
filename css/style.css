@@ -1,5 +1,5 @@
 :root {
-    --background: #DBDBDB;
+    --background: white;
     --color-1: #BF5B21;
 }
 
@@ -15,7 +15,7 @@ header {
     display: flex;
     /*justify-content: space-between;*/
     /*align-items: center;*/
-    background-color: var(--background);
+    background-color: black;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
@@ -50,7 +50,7 @@ header {
     font-family: "Source Serif 4", serif;
     font-weight: 500;
     font-size: 18px;
-    color: black;
+    color: #ffffff;
     text-decoration: none;
     position: relative;
     padding: 8px 0;
@@ -113,16 +113,16 @@ header {
     border-radius: 25px;
     font-size: 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: black;
-    color: white;
+    background-color: #ffffff;
+    color: #000000;
     text-decoration: none;
     border: none;
     cursor: pointer;
 }
 
 .cta a:hover {
-    background-color: white;
-    color: black;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 header > * {
