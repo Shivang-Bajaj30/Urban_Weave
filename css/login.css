@@ -1,6 +1,6 @@
 
 :root {
-    --background: #ece9e6;
+    --background: #000000;
     --secondary-color: #ffffff;
     --primary-color: #ff0000;
     --text-color: #333;
@@ -9,6 +9,15 @@
     --button-hover-bg: #fff;
     --button-hover-text: #000;
 }
+
+body{
+        background-image: url("https://img.freepik.com/free-vector/mix-gold-leaves-background-design-resource_53876-113864.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
 
 .container {
     display: flex;
@@ -20,15 +29,15 @@
 
 .left-section, .right-section {
     flex: 1;
-    max-width: 432px;
+    max-width: 385px;
     padding: 25px;
     border-radius: 10px;
-    height: 431px;
+    height: 440px;
 }
 
 .left-section {
     background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 14%, rgba(42,42,42,1) 57%, rgba(84,84,84,1) 100%);
+    background: linear-gradient(0deg, rgba(9, 9, 9, 0.94) 14%, rgba(42, 42, 42, 0.79) 57%, rgba(43, 40, 40, 0.77) 100%);
     color: var(--button-text);
 }
 
@@ -43,8 +52,8 @@
 }
 
 .right-section {
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(193,185,185,1) 50%, rgba(136,130,130,1) 100%);
+    background: rgba(255, 255, 255, 0.74);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.28) 10%, rgba(193, 185, 185, 0.44) 50%, rgba(136, 130, 130, 0.7) 100%);
 }
 
 .right-section h2 {
@@ -55,6 +64,7 @@
 .right-section p {
     margin-bottom: 20px;
 }
+/*
 
 form {
     display: flex;
@@ -103,6 +113,7 @@ form button:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+*/
 
 /*.social-buttons {
     display: flex;
@@ -167,4 +178,144 @@ a{
 .social-buttons button img {
     width: 20px;
     margin-right: 8px;
+}
+
+/* From Uiverse.io by ammarsaa */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    /*background-color: #1a1a1a;*/
+    color: #fff;
+    /*border: 1px solid #333;*/
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #07070e;
+}
+
+.title::before {
+    width: 18px;
+    height: 18px;
+}
+
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #054a09;
+}
+
+.message,
+.signin {
+    font-size: 14.5px;
+    color: rgb(7, 7, 14);
+}
+
+.signin {
+    text-align: center;
+}
+
+.signin a:hover {
+    text-decoration: underline royalblue;
+}
+
+.signin a {
+    color: #07070e;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 0px 5px 0px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input + span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+    top: 12.5px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+    color: rgba(207, 196, 196, 0.82);
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.input {
+    font-size: medium;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+
+    background-color: rgb(0, 0, 0);
+}
+
+.submit:hover {
+    transition: 0.3s ease;
+    background-color: rgba(25, 24, 24, 0.76);
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
 }
