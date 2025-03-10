@@ -6,6 +6,17 @@ app = Flask(__name__)
 # MongoDB Connection
 app.config["MONGO_URI"] = "mongodb+srv://sample_yt:XLxeLLukLEFFhhs5@clustersample.yegxx.mongodb.net/mydatabase?retryWrites=true&w=majority&appName=ClusterSample"
 mongo = PyMongo(app)
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+@app.route("/prod.html")
+def prod():
+    return render_template("prod.html")
+
+
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
