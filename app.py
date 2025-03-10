@@ -15,11 +15,9 @@ def home():
 def index():
     return render_template("index.html")
 
-
 @app.route("/prod.html")
 def prod():
     return render_template("prod.html")
-
 
 @app.route("/brand.html")
 def brand():
@@ -29,15 +27,14 @@ def brand():
 def login():
     return render_template("login.html")
 
-
 @app.route("/signup.html")
 def sign():
     return render_template("signup.html")
 
-
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
+        # Retrieve form data
         first_name = request.form.get('first_name')
         last_name = request.form.get('last_name')
         email = request.form.get('email')
@@ -53,6 +50,7 @@ def signup():
             'password': password
         })
 
+        # Redirect to success page or another route
         return redirect(url_for('sample'))
 
     return render_template('signup.html')
@@ -60,7 +58,6 @@ def signup():
 @app.route("/sample")
 def sample():
     return "ACCOUNT CREATED SUCCESSFULLY"
-
 
 if __name__ == '__main__':
     app.run(debug=True)
